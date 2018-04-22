@@ -32,7 +32,7 @@ xs = tf.placeholder(tf.float32,[None,64]) #8*8 pixel
 ys = tf.placeholder(tf.float32,[None,10])
 
 #add layer, two layer, one input layer one output layer
-l1 = add_layer(xs,64.100,'l1',activation_function=tf.nn.tanh)
+l1 = add_layer(xs,64,100,'l1',activation_function=tf.nn.tanh)
 prediction = add_layer(l1, 100, 10, 'l2', activation_function=tf.nn.softmax)
 
 #the lost between prediction and real data
